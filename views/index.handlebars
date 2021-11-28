@@ -1,0 +1,10 @@
+<ul id="item-list" class="collection">
+{{#each items}}    
+    <li class="collection-item" id="item-{{this.id}}">
+        <strong>{{this.item_name}}: </strong> <em>{{this.calorie}} Calories</em>
+        <a href="#" class="secondary-content">
+            <i class="edit-item fa fa-pencil"></i>
+        </a>
+    </li>
+{{/each}}    
+</ul>
