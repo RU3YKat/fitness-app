@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
             email: req.body.email
@@ -56,20 +55,6 @@ router.put('/:id', (req, res) => {
         });
 });
 
-// get users by height
-router.get('/:height', (req, res) => {
-    User.findAll({
-        attributes: {exclude: ['password'] },
-        where: {
-            height: req.params.height
-            // [height.overlap]: [60, 70]
-        }
-    })
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
+
 
 module.exports = router;
