@@ -1,25 +1,14 @@
-let mysql = require("mysql");
-let connection;
+const Sequelize = require('sequelize');
 
-//set up connection to use JAWSDB for use on Heroku or fall back to local connection
-if(process.env.JAWSDB_URL){
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-}else{
-    connection = mysql.createConnection({
-        port: 3306,
-        host: "localhost",
-        user: "root",
-        password: "",
-        database: "calorie_tracker_db"
+require('dotenv').config();
+
+// create connection to our db
+const sequelize = process.env.JAWSDB_URL
+  ? new Sequelize(process.env.JAWSDB_URL)
+  : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+      host: 'localhost',
+      dialect: 'mysql',
+      port: 3306
     });
-}
 
-connection.connect((err)=>{
-    if(err){
-        console.log(`error connecting: ${err.stack}`);
-        return;
-    }
-    console.log(`connected as id ${connection.threadId}`);
-});
-
-module.exports = connection; 
+module.exports = sequelize;
