@@ -117,11 +117,12 @@ function paintTotalCalories() {
 }
 
 function paintItem() {
+    console.log('Hello')
     const params = {
-        itemName: document.querySelector("#item-name").value,
-        itemCalorie: document.querySelector("#item-calories").value
+        foodName: document.querySelector("#item-name").value,
+        calories: document.querySelector("#item-calories").value
     }
-    const postResponse = fetch('/api/fooditems', {
+    const postResponse = fetch('/api/foods', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
