@@ -4,6 +4,7 @@ let body_parser = require("body-parser");
 let exphbs = require("express-handlebars");
 const mysql = require('mysql');
 const mysql2 = require('mysql2');
+const homeRoutes = require('./controllers/home-routes');
 
 let port = process.env.PORT || 3000;
 
@@ -17,16 +18,16 @@ app.use(body_parser.urlencoded({
 app.use(body_parser.json());
 
 //setting up the handlebars
-app.engine("handlebars",exphbs({
+app.engine("handlebars",exphbs.engine({
     defaultLayout: "main"
 }));
 app.set("view engine","handlebars");
 
 // import routes and give server access to them
-let routes = require("./controllers/controller.js");
-app.use(routes);  
+app.use(require('./controllers'))
 
 // start the server listening on a port
 app.listen(port, ()=>{
     console.log(`App is listening on PORT ${port}`);
 })
+
