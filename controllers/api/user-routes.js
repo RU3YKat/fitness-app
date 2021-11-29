@@ -17,6 +17,10 @@ router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
+        age: req.body.age,
+        height: req.body.height,
+        start_weight: req.body.start_weight,
+        goal_weight: req.body.goal_weight,
         password: req.body.password
     })
         .then(dbUserData => res.json(dbUserData))
