@@ -13,6 +13,16 @@ router.post('/', (req,res)=>{
     res.send('route is working')
 })
 
-updateroute
+//updateroute
 //router.put//
+router.put('/', (req, res) => {
+    Food.update({
+        food_name: req.body.foodName,
+        calories: req.body.calories
+    })
+
+      res.send('route is updating')
+      })
+
+
 module.exports=router
