@@ -23,4 +23,16 @@ router.get('/', async (req, res) => {
 
 
 //add getroute res.render index food.find//
+
+// check for session and redirect to homepage if true 
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  // need a login view to render functionality for fail
+  // res.render('login');
+});
+
+
 module.exports=router
