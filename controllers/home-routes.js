@@ -9,8 +9,16 @@ router.get('/', async (req, res) => {
       // each row becomes an object inside an array, meaning allFoods is an array
       const allFoods = await Food.findAll()
       const newAllFoods = allFoods.map((food) => food.get({ plain: true }))
-      console.log(allFoods);
-       res.render('index', {items: newAllFoods})
+      console.log(newAllFoods);
+      let calorieSum=0;
+      newAllFoods.forEach(food=>{
+        calorieSum += food.calories;
+      })
+      console.log(calorieSum);
+       res.render('index', {items: newAllFoods, 
+        itemSum:calorieSum
+
+      })
 
     }
     catch (err) {
