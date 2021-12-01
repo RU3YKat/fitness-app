@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function deleteAll(){
-    const delAll = fetch(`/api/fooditems`, {
+    const delAll = fetch(`/api/food-routes`, {
         method : 'delete'
     });
 
@@ -73,12 +73,12 @@ function clearFields(){
 }
 
 function updateItem(id, meal, calorie){
-    const updateItem = fetch(`/api/fooditems/${id}`,{
+    const updateItem = fetch(`/api/food-routes/${id}`,{
         method : 'put',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({id : id, meal : meal, calorie:calorie})
+        body: JSON.stringify({id : id, food_name : meal, calories:calorie})
     });
 
     updateItem.then((response)=>{
@@ -90,7 +90,8 @@ function updateItem(id, meal, calorie){
 }
 
 function deleteItem(id){
-    const delItem = fetch(`/api/fooditems/${id}`, {
+    console.log(id)
+    const delItem = fetch(`/api/food-routes/${id}`, {
         method : 'delete'
     });
 
@@ -103,18 +104,21 @@ function deleteItem(id){
 }
 
 function paintTotalCalories() {
-    const getcaloriesResponse = fetch("/api/calories");
+    const getcaloriesResponse = fetch("/api/homeRoutes");
     getcaloriesResponse.then((response) => {
         response.json().then((data) => {
             console.log(data[0].sum);
             document.querySelector(".total-calories").textContent = data[0].sum;
         }, (fail) => {
-            console.log(fail);
+            console.log(fail, 'notworking');
         })
     }, (reason) => {
         console.log(reason);
     });
 }
+
+
+
 
 function paintItem() {
     console.log('Hello')
