@@ -5,6 +5,7 @@ async function logout() {
     });
 
     if (response.ok) {
+        // if logout success return to SPA index
         document.location.replace('/');
     } else {
         alert(response.statusText);
