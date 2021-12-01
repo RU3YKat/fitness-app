@@ -50,6 +50,8 @@ async function signupFormHandler(event) {
         });
         if (response.ok) {
                 console.log('success');
+                // this will be a redirect after merging
+                // document.location.replace('/main'); ?????
             } else {
                 alert(response.statusText);
         }

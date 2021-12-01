@@ -8,12 +8,20 @@
       </div>
     </div>
 </nav>
+
 // add link to login page, unsure of styling
+// add log out, all with handlebars loggedIn logical operators
 <nav>
-    <a href="/login">Login</a>
+  {{#if loggedIn}}
+  // add link to main SPA, need name to link
+    <a href="/main">Tracalorie</a>
+      <button id="logout">logout</button>
+      {{else}}
+      <a href="/login">login</a>
+  {{/if}}
 </nav>
 
-  <br>
+<br>
 
   <div class="container">
     <!-- Form Card -->
@@ -59,3 +67,8 @@
 </ul>
 
 <script src="main.js"></script>
+
+// this logic needs to be within body tags in SPA handlebars
+{{#if loggedIn}}
+<script src='/javascript/logout.js'></script>
+{{/if}}
