@@ -1,4 +1,28 @@
-function signupFormHandler(event) {
+async function loginFormHandler(event) {
+    event.preventDefault();
+
+    // grab values from login.handlebars and POST to /api/users a new User
+    const email = document.querySelector('#email-register').value.trim();
+    const password = document.querySelector('#password-register').value.trim();
+
+    if (email && password) {
+        const response = await fetch('/api/users/login', {
+            method: 'post',
+            body: JSON.stringify({
+                username,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        if (response.ok) {
+                console.log('success');
+            } else {
+                alert(response.statusText);
+        }
+    }
+}
+
+async function signupFormHandler(event) {
     event.preventDefault();
 
     // grab values from login.handlebars and POST to /api/users a new User
@@ -7,11 +31,11 @@ function signupFormHandler(event) {
     const age = document.querySelector('#age-register').value.trim();
     const height = document.querySelector('#height-register').value.trim();
     const start = document.querySelector('#start-register').value.trim();
-    const goal = document.querySelector('#goal-register');
+    const goal = document.querySelector('#goal-register').value.trim();
     const password = document.querySelector('#password-register').value.trim();
 
     if (username && email && age && height && start && password) {
-        fetch('/api/users', {
+        const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -23,6 +47,15 @@ function signupFormHandler(event) {
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-      }).then((response) => {console.log(response)})
+        });
+        if (response.ok) {
+                console.log('success');
+            } else {
+                alert(response.statusText);
+        }
     }
-  }
+}
+
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
+document.querySelector('.register-form').addEventListener('register', signupFormHandler);
