@@ -4,4 +4,11 @@ const userRoutes = require('./user-routes');
 
 router.use('/users', userRoutes);
 
-module.exports = router;
+const foodRoutes = require('./food-routes');
+
+router.use('/foods', foodRoutes);
+
+router.post('/foods', foodRoutes);
+
+module.exports=router;
+
