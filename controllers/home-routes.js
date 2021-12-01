@@ -30,8 +30,7 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  // need a login view to render functionality for fail
-  // res.render('login');
+  res.render('login');
 });
 
 

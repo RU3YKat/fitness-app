@@ -32,15 +32,15 @@ User.init(
         },
         age: {
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         height: {
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         start_weight: {
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         goal_weight: {
             type: DataTypes.INTEGER,
