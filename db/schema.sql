@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS fitness_db;
+DROP DATABASE IF EXISTS calorie_tracker_db;
+CREATE DATABASE calorie_tracker_db;
 
-CREATE DATABASE fitness_db;
