@@ -1,3 +1,4 @@
+
 <nav>
     <div class="nav-wrapper blue">
       <div class="container">
@@ -49,20 +50,23 @@
 
     <!-- Calorie Count -->
     <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
-
+    
       
 
   </div>
 
 
 <ul id="item-list" class="collection">
-{{#each items}}    
-    <li class="collection-item" id="item-{{this.id}}">
-        <strong>{{this.item_name}}: </strong> <em>{{this.calorie}} Calories</em>
+{{#each items as |item|}} 
+    <li class="collection-item" id="item-{{item.id}}">
+        <strong>{{item.food_name}}: </strong> <em>{{item.calories}}: {{item.total-calories.sum}} Calories</em>
         <a href="#" class="secondary-content">
             <i class="edit-item fa fa-pencil"></i>
+
+        
         </a>
     </li>
+
 {{/each}}    
 </ul>
 

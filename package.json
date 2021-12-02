@@ -4,6 +4,12 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1",
     "abab": "^2.0.5",
     "accepts": "^1.3.7",
     "acorn": "^8.6.0",
@@ -36,6 +42,7 @@
     "callsites": "^3.1.0",
     "camelcase": "^5.3.1",
     "caniuse-lite": "^1.0.30001283",
+    "chai": "^4.3.4",
     "chalk": "^4.1.2",
     "char-regex": "^1.0.2",
     "ci-info": "^3.3.0",
@@ -69,7 +76,6 @@
     "detect-newline": "^3.1.0",
     "diff-sequences": "^27.0.6",
     "domexception": "^2.0.1",
-    "dotenv": "^10.0.0",
     "ee-first": "^1.1.1",
     "electron-to-chromium": "^1.4.4",
     "emittery": "^0.8.1",
@@ -86,9 +92,12 @@
     "execa": "^5.1.1",
     "exit": "^0.1.2",
     "expect": "^27.3.1",
+<<<<<<< HEAD
     "express": "^4.17.1",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+=======
+>>>>>>> develop
     "fast-json-stable-stringify": "^2.1.0",
     "fast-levenshtein": "^2.0.6",
     "fb-watchman": "^2.0.1",
@@ -189,6 +198,7 @@
     "mimic-fn": "^2.1.0",
     "minimatch": "^3.0.4",
     "minimist": "^1.2.5",
+    "mocha": "^9.1.3",
     "ms": "^2.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
@@ -242,7 +252,11 @@
     "saxes": "^5.0.1",
     "semver": "^6.3.0",
     "send": "^0.17.1",
+<<<<<<< HEAD
     "sequelize": "^6.12.0-alpha.1",
+=======
+    "sequelize-cli": "^6.3.0",
+>>>>>>> develop
     "serve-static": "^1.14.1",
     "setprototypeof": "^1.1.1",
     "shebang-command": "^2.0.0",
@@ -320,5 +334,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RU3YKat/fitness-app/issues"
+<<<<<<< HEAD
   }
+=======
+  },
+  "homepage": "https://github.com/RU3YKat/fitness-app#readme"
+>>>>>>> develop
 }

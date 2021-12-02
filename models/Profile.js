@@ -52,6 +52,10 @@ Profile.init(
             validate: {
                 len: [4]
             }
+        },
+        birthDate: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     },
     {
