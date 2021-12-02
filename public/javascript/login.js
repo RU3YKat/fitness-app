@@ -16,6 +16,7 @@ async function loginFormHandler(event) {
         });
         if (response.ok) {
                 console.log('success');
+                document.location.replace('/main');
             } else {
                 alert(response.statusText);
         }
@@ -51,7 +52,7 @@ async function signupFormHandler(event) {
         if (response.ok) {
                 console.log('success');
                 // this will be a redirect after merging
-                // document.location.replace('/main'); ?????
+                document.location.replace('/main');
             } else {
                 alert(response.statusText);
         }
@@ -60,4 +61,4 @@ async function signupFormHandler(event) {
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
-document.querySelector('.register-form').addEventListener('register', signupFormHandler);
+document.querySelector('.register-form').addEventListener('submit', signupFormHandler);

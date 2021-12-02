@@ -1,29 +1,4 @@
 
-<nav>
-    <div class="nav-wrapper blue">
-      <div class="container">
-        <a href="#" class="brand-logo center">Tracalorie</a>
-        <ul class="right">
-          <li><a href="#" class="clear-btn btn blue lighten-3">Clear All</a></li>
-        </ul>
-      </div>
-    </div>
-</nav>
-
-// add link to login page, unsure of styling
-// add log out, all with handlebars loggedIn logical operators
-<nav>
-  {{#if loggedIn}}
-  // add link to main SPA, need name to link
-    <a href="/main">Tracalorie</a>
-      <button id="logout">Logout</button>
-      {{else}}
-      <a href="/login">Login</a>
-  {{/if}}
-</nav>
-
-<br>
-
   <div class="container">
     <!-- Form Card -->
     <div class="card">
@@ -72,7 +47,3 @@
 
 <script src="main.js"></script>
 
-// this logic needs to be within body tags in SPA handlebars
-{{#if loggedIn}}
-<script src='/javascript/logout.js'></script>
-{{/if}}
