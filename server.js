@@ -1,10 +1,10 @@
 const path = require('path');
 const express = require('express');
-let body_parser = require('body-parser');
+// let body_parser = require('body-parser');
 let exphbs = require('express-handlebars');
-const mysql = require('mysql');
-const mysql2 = require('mysql2');
-const homeRoutes = require('./controllers/home-routes');
+// const mysql = require('mysql');
+// const mysql2 = require('mysql2');
+// const homeRoutes = require('./controllers/home-routes');
 
 let app = express();
 let port = process.env.PORT || 3000;
