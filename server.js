@@ -9,7 +9,7 @@ let exphbs = require('express-handlebars');
 let app = express();
 let port = process.env.PORT || 3000;
 
-const sequelize = require('./config/connection');
+// const sequelize = require('./config/connection');
 
 // const hbs = exphbs.create({});
 
