@@ -1,9 +1,13 @@
 const path = require('path');
-// const express = require('express');
-// const exphbs = require('express-handlebars');
+const express = require('express');
+let body_parser = require('body-parser');
+let exphbs = require('express-handlebars');
+const mysql = require('mysql');
+const mysql2 = require('mysql2');
+const homeRoutes = require('./controllers/home-routes');
 
-// const app = express();
-// const PORT = process.env.PORT || 3033;
+let app = express();
+let port = process.env.PORT || 3000;
 
 const sequelize = require('./config/connection');
 
@@ -16,23 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
-
-// sequelize.sync({ force: false }).then(() => {
-//     app.listen(PORT, () => console.log('Now listening'));
-// });
-
-//
-let express = require("express");
-let body_parser = require("body-parser");
-let exphbs = require("express-handlebars");
-const mysql = require('mysql');
-const mysql2 = require('mysql2');
-const homeRoutes = require('./controllers/home-routes');
-
-let port = process.env.PORT || 3000;
-
-let app = express();
+app.use(require('./controllers'));
 
 //serve static content for the app and set up body-parser
 // app.use(express.static("public"));
@@ -54,3 +42,7 @@ app.use(require('./controllers'))
 app.listen(port, ()=>{
     console.log(`App is listening on PORT ${port}`);
 })
+
+// sequelize.sync({ force: false }).then(() => {
+//     app.listen(PORT, () => console.log('Now listening'));
+// });

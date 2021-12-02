@@ -17,7 +17,7 @@ axios.request(options).then(function (response) {
 });
 
 module.exports = axios;
-=======
+
 const router =require('express').Router();
 
 const apiRoutes=require('./api');
