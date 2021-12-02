@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function deleteAll(){
-    const delAll = fetch(`/api/food-routes`, {
+    const delAll = fetch(`/api/foods`, {
         method : 'delete'
     });
 
@@ -73,7 +73,7 @@ function clearFields(){
 }
 
 function updateItem(id, meal, calorie){
-    const updateItem = fetch(`/api/food-routes/${id}`,{
+    const updateItem = fetch(`/api/foods/${id}`,{
         method : 'put',
         headers: {
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function updateItem(id, meal, calorie){
 
 function deleteItem(id){
     console.log(id)
-    const delItem = fetch(`/api/food-routes/${id}`, {
+    const delItem = fetch(`/api/foods/${id}`, {
         method : 'delete'
     });
 
@@ -104,7 +104,7 @@ function deleteItem(id){
 }
 
 function paintTotalCalories() {
-    const getcaloriesResponse = fetch("/api/homeRoutes");
+    const getcaloriesResponse = fetch("/api/foods");
     getcaloriesResponse.then((response) => {
         response.json().then((data) => {
             console.log(data[0].sum);
