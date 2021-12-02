@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/profiles/login', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -26,7 +26,7 @@ async function signupFormHandler(event) {
     event.preventDefault();
 
     // grab values from login.handlebars and POST to /api/users a new User
-    const username = document.querySelector('#username-register').value.trim();
+    const username = document.querySelector('#profilename-register').value.trim();
     const email = document.querySelector('#email-register').value.trim();
     const age = document.querySelector('#age-register').value.trim();
     const height = document.querySelector('#height-register').value.trim();
@@ -35,10 +35,10 @@ async function signupFormHandler(event) {
     const password = document.querySelector('#password-register').value.trim();
 
     if (username && email && age && height && start && password) {
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/profiles', {
             method: 'post',
             body: JSON.stringify({
-                username,
+                profilename,
                 email,
                 age,
                 height,

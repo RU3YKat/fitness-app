@@ -1,4 +1,4 @@
-const User = require('./User');
+const Profile = require('./Profile');
 const Food = require('./Food');
 
 // joining our tables???
@@ -7,4 +7,4 @@ const Food = require('./Food');
 // })
 
 
-module.exports = { Food, User };
+module.exports = { Food, Profile };

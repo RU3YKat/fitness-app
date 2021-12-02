@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { Profile } = require('../models');
 
-const userdata = [
+const profiledata = [
   {
-    username: 'alesmonde0',
+    profilename: 'alesmonde0',
     email: 'nwestnedge0@cbc.ca',
     age: 33,
     height: 72,
@@ -12,7 +12,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'jwilloughway1',
+    profilename: 'jwilloughway1',
     email: 'rmebes1@sogou.com',
     age: 17,
     height: 60,
@@ -20,7 +20,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'iboddam2',
+    profilename: 'iboddam2',
     email: 'cstoneman2@last.fm',
     age: 46,
     height: 66,
@@ -29,7 +29,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'dstanmer3',
+    profilename: 'dstanmer3',
     email: 'ihellier3@goo.ne.jp',
     age: 55,
     height: 70,
@@ -38,7 +38,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'djiri4',
+    profilename: 'djiri4',
     email: 'gmidgley4@weather.com',
     age: 35,
     height: 74,
@@ -47,7 +47,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'msprague5',
+    profilename: 'msprague5',
     email: 'larnout5@imdb.com',
     age: 23,
     height: 72,
@@ -55,7 +55,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'mpergens6',
+    profilename: 'mpergens6',
     email: 'hnapleton6@feedburner.com',
     age: 29,
     height: 64,
@@ -64,7 +64,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'tpenniell7',
+    profilename: 'tpenniell7',
     email: 'kperigo7@china.com.cn',
     age: 39,
     height: 68,
@@ -73,7 +73,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'msabbins8',
+    profilename: 'msabbins8',
     email: 'lmongain8@google.ru',
     age: 24,
     height: 68,
@@ -82,7 +82,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'jmacarthur9',
+    profilename: 'jmacarthur9',
     email: 'bsteen9@epa.gov',
     age: 40,
     height: 66,
@@ -92,6 +92,6 @@ const userdata = [
   }
 ];
 
-const seedUsers = () => User.bulkCreate(userdata, {individualHooks: true});
+const seedProfiles = () => Profile.bulkCreate(profiledata, {individualHooks: true});
 
-module.exports = seedUsers;
+module.exports = seedProfiles;

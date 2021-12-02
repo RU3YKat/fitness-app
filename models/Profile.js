@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class Profile extends Model {
 // install bcrypt and call here to checkPassword 
 checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
@@ -10,7 +10,7 @@ checkPassword(loginPw) {
 }
 
 // maybe add a field for calculated BMI using api calculator?
-User.init(
+Profile.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -18,7 +18,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        profilename: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -57,22 +57,22 @@ User.init(
     {
         hooks: {
             // set up beforeCreate lifecycle "hook" functionality
-            async beforeCreate(newUserData) {
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
-                return newUserData;
+            async beforeCreate(newProfileData) {
+                newProfileData.password = await bcrypt.hash(newProfileData.password, 10);
+                return newProfileData;
             },
     
-            async beforeUpdate(updatedUserData) {
-                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-                return updatedUserData;
+            async beforeUpdate(updatedProfileData) {
+                updatedProfileData.password = await bcrypt.hash(updatedProfileData.password, 10);
+                return updatedProfileData;
             }
         },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'profile'
     }
 );
 
-module.exports = User;
+module.exports = Profile;
