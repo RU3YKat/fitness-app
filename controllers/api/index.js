@@ -10,5 +10,6 @@ router.use('/foods', foodRoutes);
 
 router.post('/foods', foodRoutes);
 
-module.exports=router;
+router.delete('/foods', foodRoutes);
 
+module.exports=router
