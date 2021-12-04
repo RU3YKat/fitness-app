@@ -15,7 +15,7 @@ router.use('/foods', foodRoutes);
 
 
 // router.use('/bmicalculator', bmiRoutes);
-router.post('/foods', foodRoutes);
+router.post('/foods/:id', foodRoutes);
 router.delete('/foods', foodRoutes);
 
 module.exports = router;
