@@ -1,14 +1,13 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-let exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 
 // const mysql = require('mysql');
 // const mysql2 = require('mysql2');
 // const homeRoutes = require('./controllers/home-routes');
 
 const app = express();
-// let port = process.env.PORT || 3000;
 const PORT = process.env.PORT || 3000;
 
 const sequelize = require('./config/connection');
@@ -26,13 +25,21 @@ const sess = {
 
 app.use(session(sess));
 
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
+
 //setting up the handlebars
-app.engine("handlebars",exphbs.engine({
-    defaultLayout: "main",
-    
+// app.engine('handlebars', exphbs.engine({
+//    defaultLayout: 'main', 
+// }));
+
+// referenced (https://stackoverflow.com/questions/41423727/handlebars-registerhelper-serverside-with-expressjs)
+app.engine('handlebars', exphbs.engine({
+    defaultLayout: 'main',
+    extname: '.handlebars',
+    helpers: require('./utils/helpers') 
 }));
-app.set("view engine","handlebars");
-// const hbs = exphbs.create({});
+app.set('view engine','handlebars');
 
 //serve static content for the app and set up body-parser
 app.use(express.json());
@@ -47,6 +54,6 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 // start the server listening on a port
-// app.listen(port, ()=>{
-//     console.log(`App is listening on PORT ${port}`);
+// app.listen(PORT, ()=>{
+//     console.log(`App is listening on PORT ${PORT}`);
 // })

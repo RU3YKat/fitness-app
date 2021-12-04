@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
         });
         if (response.ok) {
                 console.log('success');
-                document.location.replace('/main');
+                document.location.replace('index');
             } else {
                 alert(response.statusText);
         }
@@ -27,7 +27,7 @@ async function signupFormHandler(event) {
     event.preventDefault();
 
     // grab values from login.handlebars and POST to /api/users a new User
-    const username = document.querySelector('#profilename-register').value.trim();
+    const profilename = document.querySelector('#profilename-register').value.trim();
     const email = document.querySelector('#email-register').value.trim();
     const age = document.querySelector('#age-register').value.trim();
     const height = document.querySelector('#height-register').value.trim();
@@ -35,7 +35,7 @@ async function signupFormHandler(event) {
     const goal = document.querySelector('#goal-register').value.trim();
     const password = document.querySelector('#password-register').value.trim();
 
-    if (username && email && age && height && start && password) {
+    if (profilename && email && age && height && start && password) {
         const response = await fetch('/api/profiles', {
             method: 'post',
             body: JSON.stringify({
@@ -51,8 +51,7 @@ async function signupFormHandler(event) {
         });
         if (response.ok) {
                 console.log('success');
-                // this will be a redirect after merging
-                document.location.replace('/main');
+                document.location.replace('index');
             } else {
                 alert(response.statusText);
         }

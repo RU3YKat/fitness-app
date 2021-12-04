@@ -8,9 +8,12 @@ const foodRoutes = require('./food-routes');
 // router.use('/users', bmiRoutes);
 router.use('/profiles', profileRoutes);
 router.use('/foods', foodRoutes);
+
+
+
 // router.use('/bmicalculator', bmiRoutes);
-router.post('/foods', foodRoutes);
-router.delete('/foods', foodRoutes);
+// router.post('/foods', foodRoutes);
+// router.delete('/foods', foodRoutes);
 
 module.exports = router;
 

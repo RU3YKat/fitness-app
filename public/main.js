@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let backButton = document.querySelector(".back-btn");
     let clearButton = document.querySelector(".clear-btn");
     let li = document.querySelector("#item-list");
+    let logout = document.querySelector("#logout-btn");
     let currentId;
     console.log(li);
 
@@ -52,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteAll();
     })
 
+    logout.addEventListener('click', (e) => {
+        document.location.replace('/');
+    })
 });
 
 function deleteAll(){

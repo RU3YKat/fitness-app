@@ -19,8 +19,8 @@ router.post('/', (req, res) => {
         email: req.body.email,
         age: req.body.age,
         height: req.body.height,
-        start_weight: req.body.start_weight,
-        goal_weight: req.body.goal_weight,
+        start: req.body.start,
+        goal: req.body.goal,
         password: req.body.password
     })
         .then(dbProfileData => {
@@ -30,12 +30,12 @@ router.post('/', (req, res) => {
                 req.session.loggedIn = true;
     
                 res.json(dbProfileData);
-            })
+            });
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
-    });
 });
 
 router.post('/login', (req, res) => {

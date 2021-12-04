@@ -7,8 +7,8 @@ const profiledata = [
     email: 'nwestnedge0@cbc.ca',
     age: 33,
     height: 72,
-    start_weight: 210,
-    goal_weight: 225,
+    start: 210,
+    goal: 225,
     password: 'password123'
   },
   {
@@ -16,7 +16,7 @@ const profiledata = [
     email: 'rmebes1@sogou.com',
     age: 17,
     height: 60,
-    start_weight: 95,
+    start: 95,
     password: 'password123'
   },
   {
@@ -24,8 +24,8 @@ const profiledata = [
     email: 'cstoneman2@last.fm',
     age: 46,
     height: 66,
-    start_weight: 140,
-    goal_weight: 135,
+    start: 140,
+    goal: 135,
     password: 'password123'
   },
   {
@@ -33,8 +33,8 @@ const profiledata = [
     email: 'ihellier3@goo.ne.jp',
     age: 55,
     height: 70,
-    start_weight: 286,
-    goal_weight: 260,
+    start: 286,
+    goal: 260,
     password: 'password123'
   },
   {
@@ -42,8 +42,8 @@ const profiledata = [
     email: 'gmidgley4@weather.com',
     age: 35,
     height: 74,
-    start_weight: 265,
-    goal_weight: 265,
+    start: 265,
+    goal: 265,
     password: 'password123'
   },
   {
@@ -51,7 +51,7 @@ const profiledata = [
     email: 'larnout5@imdb.com',
     age: 23,
     height: 72,
-    start_weight: 180,
+    start: 180,
     password: 'password123'
   },
   {
@@ -59,8 +59,8 @@ const profiledata = [
     email: 'hnapleton6@feedburner.com',
     age: 29,
     height: 64,
-    start_weight: 105,
-    goal_weight: 95,
+    start: 105,
+    goal: 95,
     password: 'password123'
   },
   {
@@ -68,8 +68,8 @@ const profiledata = [
     email: 'kperigo7@china.com.cn',
     age: 39,
     height: 68,
-    start_weight: 145,
-    goal_weight: 140,
+    start: 145,
+    goal: 140,
     password: 'password123'
   },
   {
@@ -77,8 +77,8 @@ const profiledata = [
     email: 'lmongain8@google.ru',
     age: 24,
     height: 68,
-    start_weight: 210,
-    goal_weight: 155,
+    start: 210,
+    goal: 155,
     password: 'password123'
   },
   {
@@ -86,8 +86,8 @@ const profiledata = [
     email: 'bsteen9@epa.gov',
     age: 40,
     height: 66,
-    start_weight: 154,
-    goal_weight: 135,
+    start: 154,
+    goal: 135,
     password: 'password123'
   }
 ];

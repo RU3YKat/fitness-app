@@ -16,7 +16,7 @@ Profile.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
         profilename: {
             type: DataTypes.STRING,
@@ -38,11 +38,11 @@ Profile.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        start_weight: {
+        start: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        goal_weight: {
+        goal: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
