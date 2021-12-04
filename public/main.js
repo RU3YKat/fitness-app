@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let backButton = document.querySelector(".back-btn");
     let clearButton = document.querySelector(".clear-btn");
     let li = document.querySelector("#item-list");
-    let logout = document.querySelector("#logout-btn");
+    let logout = document.querySelector("#logout");
     let currentId;
     console.log(li);
 

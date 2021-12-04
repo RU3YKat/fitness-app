@@ -17,7 +17,7 @@ const sess = {
     secret: process.env.DB_SECRET,
     cookie: {},
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: new SequelizeStore({
         db: sequelize
     })
@@ -25,8 +25,8 @@ const sess = {
 
 app.use(session(sess));
 
-const helpers = require('./utils/helpers');
-const hbs = exphbs.create({ helpers });
+// const helpers = require('./utils/helpers');
+// const hbs = exphbs.create({ helpers });
 
 //setting up the handlebars
 // app.engine('handlebars', exphbs.engine({
