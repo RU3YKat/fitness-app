@@ -1,23 +1,24 @@
 const { Model, DataTypes } = require('sequelize');
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {}
+class Profile extends Model {
 // install bcrypt and call here to checkPassword 
-// and return bcrypt.compareSync
-// checkPassword(loginPw) {
-//     return bcrypt.compareSync(loginPw, this.password);
+checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 // maybe add a field for calculated BMI using api calculator?
-User.init(
+Profile.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        username: {
+        profilename: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -29,15 +30,19 @@ User.init(
                 isEmail: true
             }
         },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         height: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        startWeight: {
+        start: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        goalWeight: {
+        goal: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
@@ -54,24 +59,24 @@ User.init(
         }
     },
     {
-        // hooks: {
-        //     // set up beforeCreate lifecycle "hook" functionality
-        //     async beforeCreate(newUserData) {
-        //         newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        //         return newUserData;
-        //     },
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            async beforeCreate(newProfileData) {
+                newProfileData.password = await bcrypt.hash(newProfileData.password, 10);
+                return newProfileData;
+            },
     
-        //     async beforeUpdate(updatedUserData) {
-        //         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        //         return updatedUserData;
-        //     }
-        // },
+            async beforeUpdate(updatedProfileData) {
+                updatedProfileData.password = await bcrypt.hash(updatedProfileData.password, 10);
+                return updatedProfileData;
+            }
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'profile'
     }
 );
 
-module.exports = User;
+module.exports = Profile;

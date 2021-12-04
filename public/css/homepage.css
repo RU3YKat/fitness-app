@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background-image: url("../images/KClanding.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.go {
+  background: #ffb310;
+  background-image: -webkit-linear-gradient(top, #ffb310, #da310a);
+  background-image: -moz-linear-gradient(top, #ffb310, #da310a);
+  background-image: -ms-linear-gradient(top, #ffb310, #da310a);
+  background-image: -o-linear-gradient(top, #ffb310, #da310a);
+  background-image: -webkit-gradient(to bottom, #ffb310, #da310a);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 15px;
+  -webkit-box-shadow: 1px 1px 20px 0 #000000;
+  -moz-box-shadow: 1px 1px 20px 0 #000000;
+  box-shadow: 1px 1px 20px 0 #000000;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #337fed 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.go:hover {
+  background: #ffffff;
+  border: solid #da310a 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.box.flex {
+  display: flex;
+  justify-content: center;
+}
+/* 
+.box {
+  padding: 0.5rem;
+  height: 300px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  color: #84613d;
+  font-family: "Lucida Console", Monaco, monospace;
+  background: #fdf9ea;
+  border-bottom: 1px solid #f9f2d6;
+  border-right: 1px solid #f9f2d6;
+}
+
+.box a {
+  max-width: 125px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0.25rem;
+  padding: 0.25rem;
+} */

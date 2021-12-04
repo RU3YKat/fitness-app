@@ -1,0 +1,76 @@
+{{#section 'head'}}
+    <meta charset="UTF-8">
+    <title>KiloCalorie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{{/section}}
+
+    <nav>
+        <div class="nav-wrapper blue">
+            <div class="container">
+                <a href="#" class="brand-logo center">KiloCalorie</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <form class="login-form">
+                <div class="row">
+                    <div class="input-field col-6">
+                        <label for="email-login">Email:</label>
+                        <input type="text" placeholder="Your email" id="email-login" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="password-login">Password:</label>
+                        <input type="password" placeholder="Your password" id="password-login" />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn orange">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <form class="register-form">
+                <div class="row">
+                    <div class="input-field col-6">
+                        <label for="profilename-register">Profile name (required):</label>
+                        <input type="text" placeholder="Your username" id="profilename-register" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="email-register">Email (required):</label>
+                        <input type="text" placeholder="Your email" id="email-register" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="age-register">Age (required):</label>
+                        <input type="text" placeholder="Your age in years" id="age-register" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="height-register">Height (required):</label>
+                        <input type="number" placeholder="Your height in inches" id="height-register" step="1" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="start-register">Starting weight (required):</label>
+                        <input type="number" placeholder="Your current weight in pounds" id="start-register" step="1" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="goal-register">Goal weight:</label>
+                        <input type="number" placeholder="Your goal weight in pounds" id="goal-register" step="1" />
+                    </div>
+                    <div class="input-field col-6">
+                        <label for="password-register">Password (required):</label>
+                        <input type="password" placeholder="Create your password" id="password-register" />
+                    </div>
+
+                    <button type="submit" class="btn blue darken-3">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/javascript/login.js"></script>

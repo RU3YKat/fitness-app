@@ -1,4 +1,10 @@
-const User = require('./User');
-const Food = require('./Food')
+const Profile = require('./Profile');
+const Food = require('./Food');
 
-module.exports = { Food, User };
+// joining our tables???
+// User.hasMany(Food, {
+//     foreignKey: ''
+// })
+
+
+module.exports = { Food, Profile };

@@ -1,23 +1,31 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Food } = require('../models');
+const { Profile , Food } = require('../models');
 
+// check for session and redirect to homepage if true 
+router.get('/', (req, res) => {
+  res.render('homepage');
+});
 
-router.get('/', async (req, res) => {
+// path for /login, if loggedIn 
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+router.get('/index', async (req, res) => {
     try {
       // use the sequelize ORM method findAll to get back all the rows in the food table
       // each row becomes an object inside an array, meaning allFoods is an array
       const allFoods = await Food.findAll()
       const newAllFoods = allFoods.map((food) => food.get({ plain: true }))
-      console.log(newAllFoods);
-      let calorieSum=0;
-      newAllFoods.forEach(food=>{
-        calorieSum += food.calories;
+        console.log(newAllFoods);
+        let calorieSum=0;
+        newAllFoods.forEach(food=>{
+          calorieSum += food.calories;
       })
       console.log(calorieSum);
-       res.render('index', {items: newAllFoods, 
-        itemSum:calorieSum
-
+        res.render('index', {items: newAllFoods, 
+          itemSum:calorieSum, loggedIn: req.session.loggedIn
       })
 
     }
@@ -31,4 +39,5 @@ router.get('/', async (req, res) => {
 
 
 //add getroute res.render index food.find//
-module.exports=router
+
+module.exports = router;

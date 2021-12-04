@@ -1,12 +1,11 @@
-const seedUsers = require('./user-seeds');
-// const seedUsers = require('./user-seed');
+const seedProfiles = require('./profile-seeds');
 const seedFoods = require('./food-seed');
 
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-  await seedUsers();
+  await seedProfiles();
   console.log('--------------');
   
 
