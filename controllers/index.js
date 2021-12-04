@@ -2,12 +2,12 @@ const router =require('express').Router();
 
 const apiRoutes=require('./api');
 const homeRoutes=require('./home-routes');
-// const foodRoutes= require('./api/food-routes');
+const foodRoutes= require('./api/food-routes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-// router.use('/api', homeRoutes);
-// router.use('/api', foodRoutes);
+router.use('/api', homeRoutes);
+router.use('/api', foodRoutes);
 
 
 module.exports = router;

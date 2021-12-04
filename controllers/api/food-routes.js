@@ -5,6 +5,7 @@ const {Food} = require('../../models');
 const { destroy } = require('../../models/Food');
 
 router.post('/:id', (req,res)=>{
+  console.log('at post:id');
     console.log(req.body)
     Food.create({
         food_name: req.body.foodName,
