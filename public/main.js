@@ -121,9 +121,6 @@ function paintTotalCalories() {
     });
 }
 
-
-
-
 function paintItem() {
     console.log('Hello')
     const params = {

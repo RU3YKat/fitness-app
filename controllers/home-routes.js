@@ -34,10 +34,6 @@ router.get('/index', async (req, res) => {
       res.status(500).json(err)
     }
   })
-//update route//
 
-
-
-//add getroute res.render index food.find//
 
 module.exports = router;

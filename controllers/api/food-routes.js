@@ -5,8 +5,6 @@ const {Food} = require('../../models');
 const { destroy } = require('../../models/Food');
 
 router.post('/:id', (req,res)=>{
-  console.log('at post:id');
-    console.log(req.body)
     Food.create({
         food_name: req.body.foodName,
         calories: req.body.calories
@@ -15,11 +13,7 @@ router.post('/:id', (req,res)=>{
     res.send('route is working')
 })
 
-//updateroute
-//router.put//
 router.put('/:id', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  
     // pass in req.body instead to only update what's passed through
     Food.update(req.body, {
       individualHooks: true,
@@ -58,9 +52,9 @@ router.put('/:id', (req, res) => {
         res.status(500).json(err);
       });
   });
-    
 
-    
-         
+
+
+
 
 module.exports=router

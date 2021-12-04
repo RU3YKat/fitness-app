@@ -26,7 +26,7 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
     event.preventDefault();
 
-    // grab values from login.handlebars and POST to /api/users a new User
+    // grab values from login.handlebars and POST to /api/users a new Profile
     const profilename = document.querySelector('#profilename-register').value.trim();
     const email = document.querySelector('#email-register').value.trim();
     const age = document.querySelector('#age-register').value.trim();
