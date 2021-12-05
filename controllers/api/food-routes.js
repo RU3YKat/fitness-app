@@ -25,11 +25,15 @@ router.get('/', (req, res) => {
 router.post('/:id', (req,res)=>{
     Food.create({
         food_name: req.body.foodName,
-        calories: req.body.calories
+        calories: req.body.calories,
+        profile_id: req.session.profile_id
     })
-
-    res.send('route is working')
-})
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.put('/:id', (req, res) => {
     // pass in req.body instead to only update what's passed through
