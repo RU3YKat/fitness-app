@@ -10,14 +10,20 @@ Food.init(
       primaryKey: true,
       autoIncrement: true
     },
-   food_name:{
-     type: DataTypes.STRING
+    food_name:{
+      type: DataTypes.STRING
 
-   },
-   calories:{
-     type: DataTypes.INTEGER
-   }
-  
+    },
+    calories:{
+      type: DataTypes.INTEGER
+    },
+    profile_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'profile',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,

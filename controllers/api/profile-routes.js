@@ -13,6 +13,16 @@ router.get('/', (req, res) => {
     });
 });
 
+// get Profile by id and associated Food
+// router.get('/:id', (req, res) => {
+//     Profile.findAll({
+//         where: {
+//             id: req.body.id
+//         },
+//         include: []
+//     })
+// })
+
 router.post('/', (req, res) => {
     Profile.create({
         profilename: req.body.profilename,

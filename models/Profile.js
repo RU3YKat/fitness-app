@@ -56,7 +56,8 @@ Profile.init(
         birthDate: {
             type: DataTypes.STRING,
             allowNull: true
-        }
+        },
+        
     },
     {
         hooks: {

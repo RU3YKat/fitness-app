@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(li);
 
     addButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
         // send an AJAX request to the APIs  
         paintItem();
         paintTotalCalories();
-        //e.preventDefault();
     });
 
     li.addEventListener('click', (e)=>{
@@ -107,14 +108,16 @@ function deleteItem(id){
     });
 }
 
-function paintTotalCalories() {
-    const getcaloriesResponse = fetch("/api/foods");
+async function paintTotalCalories(event) {
+    event.stopPropagation();
+
+    const getcaloriesResponse = await fetch("/api/foods");
     getcaloriesResponse.then((response) => {
         response.json().then((data) => {
             console.log(data[0].sum);
             document.querySelector(".total-calories").textContent = data[0].sum;
         }, (fail) => {
-            console.log(fail, 'notworking');
+            console.log(fail + 'notworking');
         })
     }, (reason) => {
         console.log(reason);
