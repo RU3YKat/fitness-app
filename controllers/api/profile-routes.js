@@ -14,35 +14,35 @@ router.get('/', (req, res) => {
 });
 
 // get Profile by id and associated Food
-// router.get('/:id', (req, res) => {
-//     Profile.findOne({
-//         attributes: { exclude: ['password'] },
-//         where: {
-//             id: req.body.id
-//         },
-//         include: [
-//             {
-//                 model: Food,
-//                 attributes: [
-//                     'id',
-//                     'food_name',
-//                     'calories'
-//                 ]
-//             }
-//         ]
-//     })
-//     .then(dbProfileData => {
-//         if (!dbProfileData) {
-//             res.status(404).json({ message: 'No profile found with this id' });
-//             return;
-//         }
-//         res.json(dbProfileData);
-//         })
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     });
-// });
+router.get('/:id', (req, res) => {
+    Profile.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+            id: req.body.id
+        },
+        include: [
+            {
+                model: Food,
+                attributes: [
+                    'id',
+                    'food_name',
+                    'calories'
+                ]
+            }
+        ]
+    })
+    .then(dbProfileData => {
+        if (!dbProfileData) {
+            res.status(404).json({ message: 'No profile found with this id' });
+            return;
+        }
+        res.json(dbProfileData);
+        })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 router.post('/', (req, res) => {
     Profile.create({
