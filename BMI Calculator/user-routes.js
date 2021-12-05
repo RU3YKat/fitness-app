@@ -1,5 +1,6 @@
-const router = require('axios').Router();
-const { User } = require('../../models');
+const express = require('express').Router();
+const axios = require('axios').Router();
+import { User } from '../../models';
 
 // get all users
 router.get('/', (req, res) => {
@@ -66,4 +67,4 @@ router.post('/',(req,res)=>{
     });
  
 });
-module.exports = router;
+export default router;

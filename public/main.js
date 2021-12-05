@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let updateButton = document.querySelector(".update-btn");
     let backButton = document.querySelector(".back-btn");
     let clearButton = document.querySelector(".clear-btn");
+    let bmiButton = document.querySelector("#bmi-btn");
     let li = document.querySelector("#item-list");
     let currentId;
     console.log(li);
@@ -50,9 +51,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
     clearButton.addEventListener('click', (e)=>{
         deleteAll();
-    })
+    });
+    bmiButton.addEventListener('click', (e)=>{
+        // update button
+        let itemHeight = document.querySelector("#height").value;
+        let itemWeight = document.querySelector("#weight").value;
+        bmiCalculator(itemHeight, itemWeight);
+        //e.preventDefault();
+    });
 
 });
+function bmiCalculator (heightItem, weightItem){
+    const updateItem = fetch(`/bmicalculator`,{
+        method : 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        // body: JSON.stringify({id : id, meal : meal, calorie:calorie})
+    });
+
+    updateItem.then((response)=>{
+        // location.reload();
+        console.log(response);
+    },(reject)=>{
+        console.log(reject);
+    })
+    
+    // var options = {
+    //     method: 'GET',
+    //     url: 'https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial',
+    //     params: {weight: weightItem, height: heightItem},
+    //     headers: {
+    //       'x-rapidapi-host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
+    //       'x-rapidapi-key': 'ca72822864msha4754cc1b6a949dp18b2d1jsnd539212de311'
+    //     }
+    //   };
+      
+    //   axios.request(options).then(function (response) {
+    //       console.log(response.data);
+    //   }).catch(function (error) {
+    //       console.error(error);
+    //   });
+   
+}
 
 function deleteAll(){
     const delAll = fetch(`/api/fooditems`, {

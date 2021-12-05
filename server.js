@@ -12,11 +12,7 @@ const sequelize = require('./config/connection');
 // app.engine('handlebars', hbs.engine);
 // app.set('view engine', 'handlebars');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
 
 // sequelize.sync({ force: false }).then(() => {
 //     app.listen(PORT, () => console.log('Now listening'));
@@ -33,6 +29,11 @@ const homeRoutes = require('./controllers/home-routes');
 let port = process.env.PORT || 3000;
 
 let app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('./controllers/'));
 
 //serve static content for the app and set up body-parser
 // app.use(express.static("public"));

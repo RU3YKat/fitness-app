@@ -3,7 +3,8 @@ const { User } = require('../../models');
 
 //sends index.html
 router.get("/bmicalculator", function (req, res) {
-    res.sendFile(__dirname + "/" + "index.html");
+    // res.sendFile(__dirname + "/" + "index.html");
+ alert("BMI")   
 });
 
 // get all users
