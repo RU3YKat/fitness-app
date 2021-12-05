@@ -109,7 +109,7 @@ function deleteItem(id){
 }
 
 async function paintTotalCalories(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
 
     const getcaloriesResponse = await fetch("/api/foods");
     getcaloriesResponse.then((response) => {
