@@ -15,7 +15,7 @@ User data is secured with their passwords at login.
 - [License](#license)
 - [Contributing](#contributing)
 - [Testing](#testing)
-- [Questions?](#questions?)
+- [Questions](#questions)
 
 ## [Technology](#technology)
 
@@ -73,7 +73,7 @@ Future deployments to calculate BMI, track health data, and apply data gathered 
 
 To test the program, please follow above Installation guide.
 
-## [Questions?](#questions?)
+## [Questions](#questions)
 
 This program was created by:<br>
 [Brandon Pena on Github](https://github.com/Brandonpena97)<br>
