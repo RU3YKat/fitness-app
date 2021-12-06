@@ -77,6 +77,6 @@ To test the program, please follow above Installation guide.
 
 This program was created by:<br>
 [Brandon Pena on Github](https://github.com/Brandonpena97)<br>
-[Sunita Maharaj Persad on Github](https://github.com/Sunita002)<br>  
+[Sunita Maharaj Persad on Github](https://github.com/Sunita002)<br>
 [ru3ykat on Github](https://github.com/RU3YKat)<br>
 [Vanessa Sylverain on Github](https://github.com/sylverainv)
