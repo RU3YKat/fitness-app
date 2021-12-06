@@ -46,6 +46,16 @@ After establishing your mySQL user settings, setup the database via the followin
 > exit;
 ```
 
+Create a .env file in the root of your new app folder and enter:
+
+```
+DB_NAME='calorie_tracker_db'
+DB_USER='< your mysql username >'
+DB_PW='< your mysql password >'
+
+DB_SECRET='< your chosen cookie secret text >'
+```
+
 Run your local KiloCalorie by executing `npm start` from the command line.
 
 ## [Usage](#usage)
