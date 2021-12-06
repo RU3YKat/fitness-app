@@ -10,11 +10,11 @@ User data is secured with their passwords at login.
 ## Table of Contents
 
 - [Technology](#technology)
-- [Installation Instructions](#installation)
-- [Usage Information](#usage)
+- [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
-- [Contribution Guidelines](#contributing)
-- [Test Instructions](#testing)
+- [Contributing](#contributing)
+- [Testing](#testing)
 - [Questions?](#questions?)
 
 ## [Technology](#technology)
