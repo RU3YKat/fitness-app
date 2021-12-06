@@ -17,7 +17,7 @@ User data is secured with their passwords at login.
 - [Test Instructions](#testing)
 - [Questions?](#questions?)
 
-## Technology
+## [Technology](#technology)
 
 - [node.js](https://nodejs.dev/)
 - [mySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
@@ -29,7 +29,7 @@ User data is secured with their passwords at login.
 - [npm dotenv](https://www.npmjs.com/package/dotenv)
 - [npm bcrypt](https://www.npmjs.com/package/bcrypt)
 
-## Installation
+## [Installation Instructions](#installation)
 
 To use Fitness-App, visit the deployed application at [Fitness-App Deploy on Heroku](https://kilocalorie.herokuapp.com/).
 The repository can also be cloned onto your local machine, and requires the install of [node.js](https://nodejs.dev/), [mySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) and npm packages. Follow instructions on [node.js website](https://nodejs.dev/) and [mySQL site](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/), then by running the following from your CLI in the cloned repository's folder:
@@ -48,7 +48,7 @@ After establishing your mySQL user settings, setup the database via the followin
 
 Run your local Fitness-App by executing `npm start` from the command line.
 
-## Usage
+## [Usage Information](#usage)
 
 ![Fitness-App Landing Page](public/images/KClandingpgSCRNSHT.png)<br>
 The landing page for Fitness-App. Click the Go! button to begin!<br><br>
@@ -59,21 +59,21 @@ On the login and register page, users must first register with their personal he
 ![Fitness-App Application Page](public/images/KCindexpgSCRNSHT.png)<br>
 Once in the calorie tracking section, a user can add, update, and delete daily food items. All added food items are added to the daily calorie total and displayed at the bottom of the screen. The logout button allows the next user to create their personal profile and begin adding their own protected health information and daily caloric intake.<br>
 
-## License
+## [License](#license)
 
 This project was created using MIT license.
 
-## Contributing
+## [Contributing Guidelines](#contributing)
 
 This is an open source project.
 
 Future deployments to calculate BMI, track health data, and apply data gathered from wearables is forthcoming.
 
-## Testing
+## [Testing Instructions](#testing)
 
 To test the program, please follow above Installation guide.
 
-## Questions?
+## [Questions?](#question?)
 
 This program was created by:<br>
 [Brandon Pena on Github](https://github.com/Brandonpena97)<br>
