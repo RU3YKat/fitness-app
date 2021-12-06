@@ -51,12 +51,13 @@ Run your local Fitness-App by executing `npm start` from the command line.
 ## Usage
 
 ![Fitness-App Landing Page](public/images/KClandingpgSCRNSHT.png)<br>
+The landing page for Fitness-App. Click the Go! button to begin!<br><br>
 
 ![Fitness-App Login and Register Page](public/images/KCloginpgSCRNSHT.png)<br>
-On the login and register page, users must first register with their personal health information and goals. All future visits will require a login.
+On the login and register page, users must first register with their personal health information and goals. All future visits will require a login.<br><br>
 
 ![Fitness-App Application Page](public/images/KCindexpgSCRNSHT.png)<br>
-Once in the calorie tracking section, a user can add, update, and delete daily food items. All added food items are added to the daily calorie total and displayed at the bottom of the screen. The logout button allows the next user to create their personal profile and begin adding their own protected health information and daily caloric intake.
+Once in the calorie tracking section, a user can add, update, and delete daily food items. All added food items are added to the daily calorie total and displayed at the bottom of the screen. The logout button allows the next user to create their personal profile and begin adding their own protected health information and daily caloric intake.<br>
 
 ## License
 
