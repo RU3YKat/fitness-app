@@ -1,6 +1,6 @@
-# Fitness Application
+# KiloCalorie Application
 
-[Fitness-App Deploy on Heroku](https://kilocalorie.herokuapp.com/)
+[KiloCalorie Deploy on Heroku](https://kilocalorie.herokuapp.com/)
 
 ## Description
 
@@ -31,7 +31,7 @@ User data is secured with their passwords at login.
 
 ## [Installation](#installation)
 
-To use Fitness-App, visit the deployed application at [Fitness-App Deploy on Heroku](https://kilocalorie.herokuapp.com/).
+To use KiloCalorie, visit the deployed application at [KiloCalorie Deploy on Heroku](https://kilocalorie.herokuapp.com/).
 The repository can also be cloned onto your local machine, and requires the install of [node.js](https://nodejs.dev/), [mySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) and npm packages. Follow instructions on [node.js website](https://nodejs.dev/) and [mySQL site](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/), then by running the following from your CLI in the cloned repository's folder:
 
 ```
@@ -46,17 +46,17 @@ After establishing your mySQL user settings, setup the database via the followin
 > exit;
 ```
 
-Run your local Fitness-App by executing `npm start` from the command line.
+Run your local KiloCalorie by executing `npm start` from the command line.
 
 ## [Usage](#usage)
 
-![Fitness-App Landing Page](public/images/KClandingpgSCRNSHT.png)<br>
-The landing page for Fitness-App. Click the Go! button to begin!<br><br>
+![KiloCalorie Landing Page](public/images/KClandingpgSCRNSHT.png)<br>
+The landing page for KiloCalorie. Click the Go! button to begin!<br><br>
 
-![Fitness-App Login and Register Page](public/images/KCloginpgSCRNSHT.png)<br>
+![KiloCalorie Login and Register Page](public/images/KCloginpgSCRNSHT.png)<br>
 On the login and register page, users must first register with their personal health information and goals. All future visits will require a login.<br><br>
 
-![Fitness-App Application Page](public/images/KCindexpgSCRNSHT.png)<br>
+![KiloCalorie Application Page](public/images/KCindexpgSCRNSHT.png)<br>
 Once in the calorie tracking section, a user can add, update, and delete daily food items. All added food items are added to the daily calorie total and displayed at the bottom of the screen. The logout button allows the next user to create their personal profile and begin adding their own protected health information and daily caloric intake.<br>
 
 ## [License](#license)
