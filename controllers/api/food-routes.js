@@ -7,7 +7,11 @@ const { Food, Profile } = require('../../models');
 // get all foods associated with a profile
 router.get('/', (req, res) => {
   Food.findAll({
-    attributes: ['id','food_name', 'calories'],
+    attributes: [
+      'id',
+      'food_name', 
+      'calories'
+    ],
     include: [
       {
         model: Profile,
@@ -24,7 +28,7 @@ router.get('/', (req, res) => {
 
 router.post('/:id', (req,res)=>{
     Food.create({
-        food_name: req.body.foodName,
+        food_name: req.body.food_name,
         calories: req.body.calories,
         profile_id: req.session.profile_id
     })

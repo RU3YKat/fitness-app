@@ -16,15 +16,24 @@ router.get('/', (req, res) => {
 // get Profile by id and associated Food
 router.get('/:id', (req, res) => {
     Profile.findOne({
-        attributes: { exclude: ['password'] },
         where: {
-            id: req.body.id
+            id: req.params.id
+        },
+        attributes: { exclude:
+            [
+            'email',
+            'age',
+            'height',
+            'start',
+            'goal',
+            'birthDate',
+            'password'
+            ] 
         },
         include: [
             {
                 model: Food,
                 attributes: [
-                    'id',
                     'food_name',
                     'calories'
                 ]
